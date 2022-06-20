@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block body%}
+
+<div class="container border py-4 my-4 w-75">
+  <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="mb-3">
+      <label for="filename" class="form-label">Select Video File</label>
+      <input
+        type="file"
+        name="fileName"
+        class="form-control"
+        id="filename"
+        accept="video/*"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>
+
+{% endblock %}

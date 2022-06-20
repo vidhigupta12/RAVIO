@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block body%}
+<body>
+  <div style="margin-left: 5%; margin-top: 5%">
+    <h1>Trending Hashtags</h1>
+    <h2>
+      <ol>
+        {% for hashtag in hashtags %}
+        <li>{{hashtag}}</li>
+        {% endfor %}
+      </ol>
+    </h2>
+  </div>
+</body>
+
+{% endblock %}
